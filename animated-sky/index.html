@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cinematic Dynamic Sky</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="sky-background" id="sky">
+        <!-- Night stars -->
+        <div class="stars" id="stars"></div>
+
+        <!-- Sun -->
+        <div class="celestial-orbit" id="sunOrbit">
+            <div class="sun-rays"></div>
+            <div class="sun-glow"></div>
+            <div class="sun"></div>
+        </div>
+
+        <!-- Moon -->
+        <div class="celestial-orbit" id="moonOrbit">
+            <div class="moon-glow"></div>
+            <div class="moon">
+                <div class="crater c1"></div>
+                <div class="crater c2"></div>
+                <div class="crater c3"></div>
+            </div>
+        </div>
+
+        <!-- Clouds Container -->
+        <div class="clouds-layer layer-3" id="cloudsLayer3"></div>
+        <div class="clouds-layer layer-2" id="cloudsLayer2"></div>
+        <div class="clouds-layer layer-1" id="cloudsLayer1"></div>
+
+        <!-- Sky color overlays for smooth blending -->
+        <div class="sky-overlay sunset-overlay"></div>
+        <div class="sky-overlay day-overlay"></div>
+        <div class="sky-overlay sunrise-overlay"></div>
+
+        <!-- Minimal Apple-like UI -->
+        <main class="ui-container">
+            <div class="glass-panel">
+                <h1>Horizons</h1>
+                <p>A cinematic cycle of day and night.</p>
+                
+                <div class="controls">
+                    <button id="toggleTime">Pause Time</button>
+                    <label class="slider-label">
+                        Time of Day
+                        <input type="range" id="timeSlider" min="0" max="24" step="0.01" value="12">
+                    </label>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
